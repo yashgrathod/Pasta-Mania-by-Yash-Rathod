@@ -60,7 +60,9 @@ nav{
 #navItems{
     display: flex;
     gap:50px;   
+    justify-content:center;
     align-items: start;
+    width: 401px;
 }
 
 a{
