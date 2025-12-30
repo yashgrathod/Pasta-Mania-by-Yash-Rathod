@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+/* NAVIGATION BAR CSS */
+
+#navList{
+    list-style: none;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    /* margin-left: 15px;
+    margin-right: 15px; */
+    width: 100%;
+    overflow-x:none;
+    padding: 12px;
+    padding-bottom: 2px;
+}
+
+.navContainer{
+    width:100%; /* no need to give height as its just a navigation bar*/
+    background-color: rgb(255, 255, 255);
+    height: 70px; /*changed from min height to height*/
+    display: flex;
+    border-bottom: 2px solid black;
+    justify-content: center;
+    align-items: start;
+    position: relative; /*positioning wrt current window*/
+}
+
+.container{
+    height:100%;
+    width:100%;
+    overflow-x: none; /*good practice*/
+    background-color: #f3eded;
+}
+
+#navLogo{
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    font-family: "Great Vibes", cursive;
+    font-weight:500;
+    font-style: normal;
+    width:401px;
+}
+
+nav{
+    width: 100%;
+    overflow-x:none;
+}
+
+#navItems{
+    display: flex;
+    gap:50px;   
+    align-items: start;
+}
+
+a{
+    text-decoration: none; /*to remove underline from anchor tag*/
+    color: black;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 450;
+}
+
+
+/* FOOTER CSS */
+
+.footerBox{
+    width:100%; /* no need to give height as its just a navigation bar*/
+    background-color: rgb(255, 255, 255);
+    height: 50px; /*changed from min height to height*/
+    display: flex;
+    border-top: 2px solid black;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    font-family: Arial, Helvetica, sans-serif ; /*to change the font*/
+    padding: 10px;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.footerBox .made{
+    width: 36%;
+    text-align:start;
+}
+
+#footerList{
+    list-style: none;
+}
+.socialLinks{   
+    display: flex;
+    gap:36px;
+    height: 32px;
+    align-items: start;
+    overflow-y: hidden  ;
+}
+
+#visitCount{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+    width:30% ;
+    color: black;
+}
+
+#footerList:target .socialLinks {
+    animation: highlightPulse 1s ease-in-out 3;
+    border-radius: 10px;
+}
+
+@keyframes highlightPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* MAIN CONTENT OF WEBPAGE */
+.contentBox{
+    width: 81vw;
+    margin: auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: white;
+    padding: 20px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+
+.rightBox{
+    display: flex;
+    width: 36%;
+    justify-content: start;
+    align-items: stretch;
+    margin-right: 20px;  
+    position: relative;
+}
+.rightBox img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover; 
+    border-radius: 10px;
+    border:2px outset black;
+}
+
+.rightBox img:hover{
+    /* animation: imghover 1s linear 0s 1; */
+    transform: scale(1.01);
+    transition: all linear 0.5s;
+}
+
+/* @keyframes imghover {
+     0% {box-shadow: -1px -1px rgba(0, 0, 0, 0.5);}
+    25% {box-shadow: 1px -1px  rgba(0, 0, 0, 0.5);}
+    50% {box-shadow: 1px 1px  rgba(0, 0, 0, 0.5);}
+    75% {box-shadow: -1px 1px  rgba(0, 0, 0, 0.5);}
+    100%{box-shadow: -1px -1px  rgba(0, 0, 0, 0.5);}
+} */
+
+.contentBox{
+    display: flex;
+    flex-direction: column ;
+    gap:20px; 
+    box-shadow: 2px 2px 50px bisque;
+}
+ 
+ol>li{
+    padding: 2px;
+    list-style-position: inside;
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:60%;
+}
+
+.leftBox h2{
+    font-family: "Stack Sans Headline", sans-serif;
+    font-weight: 750;
+    text-decoration:underline;
+}
+
+.leftBox h3{
+    font-family: "Google Sans", sans-serif;
+    text-align: justify;
+}
+
+div p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.rightBox .overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;  
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.rightBox .overlay a{
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    padding: 10px;
+    width: 30px;
+}
+.rightBox .overlay a img{
+    height:30px;
+    width: 30px;
+    border:none;
+}
+
+.rightBox .overlay a img:hover{
+   transform: scale(1.1);
+   background-color: rgba(0,0,0,0.2);
+   transition: 0.2s linear ;
+   border-radius: 100px;
+}
+
+
+/*below 900px screen size*/
+@media (max-width: 900px) {
+
+    .contentBox {
+        width: 95vw; 
+        padding: 15px;
+    }
+
+    .item {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .leftBox {
+        width: 100%;
+    }
+
+    .rightBox {
+        width: 100%;
+        margin-right: 0; 
+        justify-content: center;
+    }
+
+    .rightBox img {
+        height: auto; 
+        max-height: 300px; 
+    }
+
+    .navContainer {
+        height: auto;
+        padding-bottom: 15px;
+    }
+
+    #navList {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #navLogo {
+        width: auto; 
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    #navItems {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .footerBox {
+        height: auto; 
+        flex-direction: column-reverse; /
+        gap: 15px;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .footerBox .made, 
+    #visitCount {
+        width: 100%;
+        text-align: center;
+    }
+
+    .socialLinks {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
